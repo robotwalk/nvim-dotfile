@@ -49,13 +49,23 @@ myPlugins = {
     },
     config = function()
       local builtin = require('telescope.builtin')
-      vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-      vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+      vim.keymap.set('n', '<leader>ff', builtin.find_files, {}) -- find files by name
+      vim.keymap.set('n', '<leader>fg', builtin.live_grep, {}) -- find content in file
       vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+      vim.keymap.set('n', '<leader>fc', builtin.grep_string, {}) -- word under cursor
       vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
     end
-  }
+  },
   ---------------- END nvim-telescope------------------------------
+  ---------------- nvim-terminal------------------------------
+  {
+    's1n7ax/nvim-terminal',
+    config = function()
+        vim.o.hidden = true
+        require('nvim-terminal').setup()
+    end,
+  }
+  ---------------- END nvim-terminal------------------------------
 }
 
 require("lazy").setup(
