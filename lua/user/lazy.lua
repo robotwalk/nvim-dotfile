@@ -64,8 +64,10 @@ myPlugins = {
         vim.o.hidden = true
         require('nvim-terminal').setup()
     end,
-  }
+  },
   ---------------- END nvim-terminal------------------------------
+  ---------------- nvim-treesitter ------------------------------
+  ---------------- END nvim-treesitter ------------------------------
 }
 
 require("lazy").setup(
