@@ -63,3 +63,6 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
+-- Toggle Term --
+--keymap("n", [[<C-t>]], '<cmd>=exe v:count1 . "ToggleTerm"<CR>', opts)
+--keymap("i", [[<C-t>]], '<cmd>=exe v:count1 . "ToggleTerm"<CR>', opts)
