@@ -5,6 +5,11 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
+-- Disable arrow keys
+keymap("", "<Up>", "<Nop>", opts)
+keymap("", "<Down>", "<Nop>", opts)
+keymap("", "<Left>", "<Nop>", opts)
+keymap("", "<Right>", "<Nop>", opts)
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
