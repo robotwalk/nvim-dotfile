@@ -8,6 +8,7 @@ require('lualine').setup {
     theme = 'gruvbox_dark'
   }
 }
+
 require("toggleterm").setup{
   open_mapping =  [[<c-t>]],
   direction = 'float',
