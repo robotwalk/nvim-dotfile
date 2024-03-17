@@ -1,12 +1,12 @@
 # Check if Git is installed
 GIT_INSTALLED := $(shell command -v git 2> /dev/null)
 TAR_FILE := ./INSTALLFILES/NVIM.tar.gz
-FOLDERS_TO_TAR := ~/.config/nvim ~/.local/share/nvim
+FOLDERS_TO_TAR := /tmp/nvimtmp
 # Target to install Git if not already installed
 install_git:
 ifndef GIT_INSTALLED
-	sudo apt-get update
-	sudo apt-get install git
+	sudo yum update
+	sudo yum install git
 endif
 
 # Target to display Git version
@@ -21,4 +21,7 @@ install_nvim: install_git
 	tar -xzvf $(TAR_FILE) --strip-components=1
 
 create_config_archive:
-	tar -czvf ./INSTALLFILES/NVIM.tar.gz $(FOLDERS_TO_TAR)
+	mkdir -p /tmp/nvimtmp
+	cp -R  ~/.config/nvim /tmp/nvimtmp
+	cp -R ~/.local/share/nvim /tmp/nvimtmp
+	tar -czvf ./INSTALLFILES/NVIM.tar.gz $(FOLDERS_TO_TAR) --strip-components=2
