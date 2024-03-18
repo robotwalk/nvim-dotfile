@@ -30,7 +30,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize +2<CR>", opts)
@@ -63,6 +62,4 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
--- Toggle Term --
---keymap("n", [[<C-t>]], '<cmd>=exe v:count1 . "ToggleTerm"<CR>', opts)
---keymap("i", [[<C-t>]], '<cmd>=exe v:count1 . "ToggleTerm"<CR>', opts)
+
