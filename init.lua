@@ -11,7 +11,7 @@ require('lualine').setup {
 
 require("toggleterm").setup{
   open_mapping =  [[<c-t>]],
-  direction = 'float',
+  direction = 'true',
   start_in_insert = true,
   auto_chdir = true,
 }
