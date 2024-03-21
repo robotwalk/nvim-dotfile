@@ -16,18 +16,16 @@ return{
             "bashls",
             "dockerls",
             "docker_compose_language_service",
-            "gopls",
             "helm_ls",
-            "json_ls",
-            "tsserver",
-            "jinja_lsp",
-            "jqls",
             "autotools_ls",
             "marksman",
             "pylsp",
             "taplo",
             "terraformls",
-            "yamlls"
+            "yamlls",
+--            "gopls",
+--            "jqls",
+            "jsonls"
           }
         }
       )
@@ -42,18 +40,16 @@ return{
       lspconfig.bashls.setup({})
       lspconfig.dockerls.setup({})
       lspconfig.docker_compose_language_service.setup({})
-      lspconfig.gopls.setup({})
       lspconfig.helm_ls.setup({})
-      lspconfig.json_ls.setup({})
-      lspconfig.tsserver({})
-      lspconfig.jinja_lsp({})
-      lspconfig.jqls({})
-      lspconfig.autotools_ls({})
-      lspconfig.marksman({})
-      lspconfig.pylsp({})
-      lspconfig.taplo({})
-      lspconfig.terraformls({})
-      lspconfig.yamlls({})
+      lspconfig.autotools_ls.setup({})
+      lspconfig.marksman.setup({})
+      lspconfig.pylsp.setup({})
+      lspconfig.taplo.setup({})
+      lspconfig.terraformls.setup({})
+      lspconfig.yamlls.setup({})
+--      lspconfig.gopls.setup({})
+--      lspconfig.jqls.setup({})
+      lspconfig.jsonls.setup({})
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
