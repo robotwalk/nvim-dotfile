@@ -1,5 +1,5 @@
 return {
-  ---------------- nightfly colorscheme ------------------
+   ---------------- nightfly colorscheme ------------------
   {
     "bluz71/vim-nightfly-guicolors",
     config = function()
