@@ -13,7 +13,6 @@ install_nvim: install_requirements
 	cp ./INSTALLFILES/nerdfonts/* ~/.local/share/fonts/
 	cd ~/.local/share/fonts/
 	fc-cache -v
-dd
 
 # Run this on a machine where everything works to get all the plugin stuff
 create_config_archive:
