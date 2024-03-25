@@ -25,7 +25,7 @@ return {
             "taplo",
             "terraformls",
             "yamlls",
-            -- "gopls",
+            "gopls",
             -- "jqls",
             "jsonls"
           }
@@ -56,7 +56,7 @@ return {
       lspconfig.taplo.setup({})
       lspconfig.terraformls.setup({})
       lspconfig.yamlls.setup({})
-      --      lspconfig.gopls.setup({})
+      lspconfig.gopls.setup({})
       --      lspconfig.jqls.setup({})
       lspconfig.jsonls.setup({})
       vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, {})
