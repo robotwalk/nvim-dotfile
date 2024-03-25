@@ -39,10 +39,10 @@ return {
     config = function()
       -- Global mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
---      vim.keymap.set('n', '<leader>e', vim.diagnostics.open_float)
---      vim.keymap.set('n', '[d', vim.diagnostics.goto_prev)
---      vim.keymap.set('n', ']d', vim.diagnostics.goto_next)
---      vim.keymap.set('n', '<leader>q', vim.diagnostics.setloclist)
+      vim.keymap.set('n', '<leader>e', vim.diagnostics.open_float)
+      vim.keymap.set('n', '[d', vim.diagnostics.goto_prev)
+      vim.keymap.set('n', ']d', vim.diagnostics.goto_next)
+      vim.keymap.set('n', '<leader>q', vim.diagnostics.setloclist)
       local lspconfig = require('lspconfig')
       lspconfig.lua_ls.setup({})
       lspconfig.ansiblels.setup({})
